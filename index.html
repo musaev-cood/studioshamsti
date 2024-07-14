@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <title>GoyMarket</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="script.js"></script>
+    <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&family=Yanone+Kaffeesatz:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container" id="categories">
+        <header>
+            <h1>GoyMarket - Ваш магазин продуктов!</h1>
+        </header>
+        <div class="categories">
+            <button class="category-element" onclick="scrollToTarget('For_Сhildren')">Для детей</button>
+            <button class="category-element" onclick="scrollToTarget('Sweets')">Сладости</button>
+            <button class="category-element" onclick="scrollToTarget('Chips_snacks_popcorn')">Чипсы, снеки и попкорн</button>
+            <button class="category-element" onclick="scrollToTarget('Water_drinks_juices')">Вода, напитки, соки</button>
+            <button class="category-element" onclick="scrollToTarget('Tea_coffee_sugar')">Чай, кофе, сахар</button>
+            <button class="category-element" onclick="scrollToTarget('Vegetables_fruits_berries')">Овощи, фрукты, ягоды</button>
+            <button class="category-element" onclick="scrollToTarget('Meat_poultry_fish')">Мясо, птица, рыба</button>
+            <button class="category-element" onclick="scrollToTarget('Milk_eggs_cheese')">Молоко, яйца, сыр</button>
+            <button class="category-element" onclick="scrollToTarget('Bread_crackers_bakery')">Хлеб, хлебцы, выпечка</button>
+            <button class="category-element" onclick="scrollToTarget('Pasta_spices_grains')">Макароны, специи, крупы</button>
+            <button class="category-element" onclick="scrollToTarget('Nuts_seeds_dried_fruits')">Орехи, семечки, сухофрукты</button>
+            <button class="category-element" onclick="scrollToTarget('Canned_pickles')">Консервы, соленья</button>
+            <button class="category-element" onclick="scrollToTarget('Sauces_mayonnaise')">Соусы, майонез</button>
+            <button class="category-element" onclick="scrollToTarget('Frozen_products')">Замороженные продукты</button>
+            <button class="category-element" onclick="scrollToTarget('Household_chemistry')">Бытовая химия</button>
+            <button class="category-element" onclick="scrollToTarget('Pet_supplies')">Зоотовары</button>
+            <button class="category-element" onclick="scrollToTarget('Personal_hygiene')">Личная гигиена</button>
+            <button class="category-element" onclick="scrollToTarget('Other')">Прочее</button>
+        </div>
+
+        <div class="inner">
+            <div class="category-title" id="For_Сhildren" style="grid-column: 1 / span 3;">Для детей</div>
+
+            <div class="product" onclick="rotateAnimation(this)">
+                <img class="product-URL" src="https://scdn.utkonos.ru/resample/webp/500x500/photo/612415/612415_3.png" alt="Product 3">
+                    <div class="product-details">
+                    <div class="product-title">PAMPERS 5 Подгузники 12–17кг(42шт)</div>
+                    <div class="product-price">1200 ₽</div>
+                    <button class="add-to-cart-button" onclick=AddToCartButton(this)>ДОБАВИТЬ</button>
+                    <button class="delete-to-cart-button" style="display:none;" onclick=deleteFromCartButton(this)>-</button>
+                    <div class="quantity">0</div>
+                </div>
+            </div>
+
+            <div class="product" onclick="rotateAnimation(this)">
+                <img class="product-URL" src="https://scdn.utkonos.ru/resample/webp/500x500/photo/641387/c3f6e1d9-3a49-4092-a307-0bd421fc91b9.png" alt="Product 3">
+                <div class="product-details">
+                    <div class="product-title">HUGGIES Elite Soft 3 Подгузники 5–9кг(72шт)</div>
+                    <div class="product-price">1500 ₽</div>
+                    <button class="add-to-cart-button" onclick=AddToCartButton(this)>ДОБАВИТЬ</button>
+                    <button class="delete-to-cart-button" style="display:none;" onclick=deleteFromCartButton(this)>-</button>
+                    <div class="quantity" style="display:none;">0</div>
+                </div>
+            </div>
+
+            <div class="product" onclick="rotateAnimation(this)">
+                <img class="product-URL" src="https://scdn.utkonos.ru/resample/webp/500x500/photo/512995/f6b686c6a6b6b0b0.png" alt="Product 3">
+                <div class="product-details">
+                    <div class="product-title">NUTRILON безмолочная, с 4 мес., 180г</div>
+                    <div class="product-price">270 ₽</div>
+                    <button class="add-to-cart-button" onclick=AddToCartButton(this)>ДОБАВИТЬ</button>
+                    <button class="delete-to-cart-button" style="display:none;" onclick=deleteFromCartButton(this)>-</button>
+                    <div class="quantity" style="display:none;">0</div>
+                </div>
+            </div>
+
+
+            <div class="product" onclick="rotateAnimation(this)">
+                <img class="product-URL" src="https://scdn.utkonos.ru/resample/webp/500x500/photo/512995/f6b686c6a6b6b0b0.png" alt="Product 3">
+                <div class="product-details">
+                    <div class="product-title">NUTRILON безмолочная, с 4 мес., 180г</div>
+                    <div class="product-price">270 ₽</div>
+                    <button class="add-to-cart-button" onclick=AddToCartButton(this)>ДОБАВИТЬ</button>
+                    <button class="delete-to-cart-button" style="display:none;" onclick=deleteFromCartButton(this)>-</button>
+                    <div class="quantity" style="display:none;">0</div>
+                </div>
+            </div>
+
+            <div class="product" onclick="rotateAnimation(this)">
+                <img class="product-URL" src="https://scdn.utkonos.ru/resample/webp/500x500/photo/641387/c3f6e1d9-3a49-4092-a307-0bd421fc91b9.png" alt="Product 3">
+                <div class="product-details">
+                    <div class="product-title">HUGGIES Elite Soft 3 Подгузники 5–9кг(72шт)</div>
+                    <div class="product-price">1500 ₽</div>
+                    <button class="add-to-cart-button" onclick=AddToCartButton(this)>ДОБАВИТЬ</button>
+                    <button class="delete-to-cart-button" style="display:none;" onclick=deleteFromCartButton(this)>-</button>
+                    <div class="quantity" style="display:none;">0</div>
+                </div>
+            </div>
+
+            <div class="product" onclick="rotateAnimation(this)">
+                <img class="product-URL" src="https://scdn.utkonos.ru/resample/webp/500x500/photo/612415/612415_3.png" alt="Product 3">
+                    <div class="product-details">
+                    <div class="product-title">PAMPERS 5 Подгузники 12–17кг(42шт)</div>
+                    <div class="product-price">1200 ₽</div>
+                    <button class="add-to-cart-button" onclick=AddToCartButton(this)>ДОБАВИТЬ</button>
+                    <button class="delete-to-cart-button" style="display:none;" onclick=deleteFromCartButton(this)>-</button>
+                    <div class="quantity">0</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="inner">
+            <div class="category-title" id="Sweets" style="grid-column: 1 / span 3;">Сладости</div>
+
+            <div class="product" onclick="rotateAnimation(this)">
+                <img class="product-URL" src="https://scdn.utkonos.ru/resample/webp/500x500/photo/572272/f2c0f0e8a2e796f6.png" alt="Product 3">
+                    <div class="product-details">
+                    <div class="product-title">Шоколад молочный АЛЁНКА, 90г</div>
+                    <div class="product-price">65 ₽</div>
+                    <button class="add-to-cart-button" onclick=AddToCartButton(this)>ДОБАВИТЬ</button>
+                    <button class="delete-to-cart-button" style="display:none;" onclick=deleteFromCartButton(this)>-</button>
+                    <div class="quantity" style="display:none;">0</div>
+                </div>
+            </div>
+
+            <div class="product" onclick="rotateAnimation(this)">
+                <img class="product-URL" src="https://scdn.utkonos.ru/resample/webp/500x500/photo/5808/580825H.png" alt="Product 3">
+                <div class="product-details">
+                    <div class="product-title">Шоколадные батончики SNICKERS Super, 80г</div>
+                    <div class="product-price">50 ₽</div>
+                    <button class="add-to-cart-button" onclick=AddToCartButton(this)>ДОБАВИТЬ</button>
+                    <button class="delete-to-cart-button" style="display:none;" onclick=deleteFromCartButton(this)>-</button>
+                    <div class="quantity" style="display:none;">0</div>
+                </div>
+            </div>
+
+            <div  class="product" onclick="rotateAnimation(this)">
+                <img class="product-URL" src="https://scdn.utkonos.ru/resample/webp/500x500/photo/1175/fcece8c8eaaa8880.png" alt="Product 3">
+                <div class="product-details">
+                    <div class="product-title">Конфеты TOFFIFEE с лесным орехом, 125г</div>
+                    <div class="product-price">150 ₽</div>
+                    <button class="add-to-cart-button" onclick=AddToCartButton(this)>ДОБАВИТЬ</button>
+                    <button class="delete-to-cart-button" style="display:none;" onclick=deleteFromCartButton(this)>-</button>
+                    <div class="quantity" style="display:none;">0</div>
+                </div>
+            </div>
+
+            <div class="product" onclick="rotateAnimation(this)">
+                <img class="product-URL" src="https://scdn.utkonos.ru/resample/webp/500x500/photo/5808/580825H.png" alt="Product 3">
+                <div class="product-details">
+                    <div class="product-title">Шоколадные батончики SNICKERS Super, 80г</div>
+                    <div class="product-price">50 ₽</div>
+                    <button class="add-to-cart-button" onclick=AddToCartButton(this)>ДОБАВИТЬ</button>
+                    <button class="delete-to-cart-button" style="display:none;" onclick=deleteFromCartButton(this)>-</button>
+                    <div class="quantity" style="display:none;">0</div>
+                </div>
+            </div>
+
+            <div class="product" onclick="rotateAnimation(this)">
+                <img class="product-URL" src="https://scdn.utkonos.ru/resample/webp/500x500/photo/1175/fcece8c8eaaa8880.png" alt="Product 3">
+                <div class="product-details">
+                    <div class="product-title">Конфеты TOFFIFEE с лесным орехом, 125г</div>
+                    <div class="product-price">150 ₽</div>
+                    <button class="add-to-cart-button" onclick=AddToCartButton(this)>ДОБАВИТЬ</button>
+                    <button class="delete-to-cart-button" style="display:none;" onclick=deleteFromCartButton(this)>-</button>
+                    <div class="quantity" style="display:none;">0</div>
+                </div>
+            </div>
+
+            <div class="product" onclick="rotateAnimation(this)">
+                <img class="product-URL" src="https://scdn.utkonos.ru/resample/webp/500x500/photo/572272/f2c0f0e8a2e796f6.png" alt="Product 3">
+                    <div class="product-details">
+                    <div class="product-title">Шоколад молочный АЛЁНКА, 90г</div>
+                    <div class="product-price">65 ₽</div>
+                    <button class="add-to-cart-button" onclick=AddToCartButton(this)>ДОБАВИТЬ</button>
+                    <button class="delete-to-cart-button" style="display:none;" onclick=deleteFromCartButton(this)>-</button>
+                    <div class="quantity" style="display:none;">0</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="inner">
+            <div class="category-title" id="Chips_snacks_popcorn" style="grid-column: 1 / span 3;">Чипсы, снеки и попкорн</div>
+                <div class="product" onclick="rotateAnimation(this)">
+                    <img class="product-URL" src="https://cdn.parhato.ru/wp-content/uploads/2022/11/e787d450611911eda27800155d01c83b_eb3775ba615711ed98d100155d203202-2.jpg" alt="Product 3">
+                    <div class="product-details">
+                    <div class="product-title">Чипсы Lays Зелёный лук 140г</div>
+                    <div class="product-price">149 ₽</div>
+                    <button class="add-to-cart-button" onclick=AddToCartButton(this)>ДОБАВИТЬ</button>
+                    <button class="delete-to-cart-button" style="display:none;" onclick=deleteFromCartButton(this)>-</button>
+                    <div class="quantity" style="display:none;">0</div>
+                    </div>
+                </div>
+
+                <div class="product" onclick="rotateAnimation(this)">
+                    <img class="product-URL" src="https://cdn.parhato.ru/wp-content/uploads/2023/04/9fdba608611911eda27800155d01c83b_40ac848a615911ed98d100155d203202.jpg" alt="Product 3">
+                    <div class="product-details">
+                    <div class="product-title">Чипсы Pringles Original 165г</div>
+                    <div class="product-price">270 ₽</div>
+                    <button class="add-to-cart-button" onclick=AddToCartButton(this)>ДОБАВИТЬ</button>
+                    <button class="delete-to-cart-button" style="display:none;" onclick=deleteFromCartButton(this)>-</button>
+                    <div class="quantity" style="display:none;">0</div>
+                    </div>
+                </div>
+
+                <div class="product" onclick="rotateAnimation(this)">
+                    <img class="product-URL" src="https://cdn.parhato.ru/wp-content/uploads/2022/11/cd598898611911eda27800155d01c83b_b5c8d528615b11ed98d100155d203202.jpg" alt="Product 3">
+                    <div class="product-details">
+                    <div class="product-title">Хрустяшки со вкусом укропа и сметаны 40г</div>
+                    <div class="product-price">17 ₽</div>
+                    <button class="add-to-cart-button" onclick=AddToCartButton(this)>ДОБАВИТЬ</button>
+                    <button class="delete-to-cart-button" style="display:none;" onclick=deleteFromCartButton(this)>-</button>
+                    <div class="quantity" style="display:none;">0</div>
+                    </div>
+                </div>
+        </div>
+
+        <div class="inner">
+            <div class="category-title" id="Water_drinks_juices" style="grid-column: 1 / span 3;">Вода, напитки, соки</div>
+
+            <div class="product" onclick="rotateAnimation(this)">
+                <img class="product-URL" src="https://scdn.utkonos.ru/resample/webp/500x500/photo/118230/1d1cecfa-a9f6-4f42-809c-1a477a230796.png" alt="Product 3">
+                    <div class="product-details">
+                    <div class="product-title">Вода питьевая СЕНЕЖСКАЯ газированная, 1.5л</div>
+                    <div class="product-price">40 ₽</div>
+                    <button class="add-to-cart-button" onclick=AddToCartButton(this)>ДОБАВИТЬ</button>
+                    <button class="delete-to-cart-button" style="display:none;" onclick=deleteFromCartButton(this)>-</button>
+                    <div class="quantity" style="display:none;">0</div>
+                </div>
+            </div>
+
+            <div class="product" onclick="rotateAnimation(this)">
+                <img class="product-URL" src="https://scdn.utkonos.ru/resample/webp/500x500/photo/501439/86d6bab0-e701-470b-8d74-740a5ce85b76.png" alt="Product 3">
+                <div class="product-details">
+                    <div class="product-title">ADRENALINE Rush Энергия газированный, 0.449л</div>
+                    <div class="product-price">130 ₽</div>
+                    <button class="add-to-cart-button" onclick=AddToCartButton(this)>ДОБАВИТЬ</button>
+                    <button class="delete-to-cart-button" style="display:none;" onclick=deleteFromCartButton(this)>-</button>
+                    <div class="quantity" style="display:none;">0</div>
+                </div>
+            </div>
+
+            <div class="product" onclick="rotateAnimation(this)">
+                <img class="product-URL" src="https://scdn.utkonos.ru/resample/webp/500x500/photo/659902/daf1c73a-836a-4a95-9bcd-fcedaebfcb43.png" alt="Product 3">
+                <div class="product-details">
+                    <div class="product-title">ДОБРЫЙ Кола сильногазированный, 1.5л</div>
+                    <div class="product-price">90 ₽</div>
+                    <button class="add-to-cart-button" onclick=AddToCartButton(this)>ДОБАВИТЬ</button>
+                    <button class="delete-to-cart-button" style="display:none;" onclick=deleteFromCartButton(this)>-</button>
+                    <div class="quantity" style="display:none;">0</div>
+                </div>
+            </div>
+
+            <div class="product" onclick="rotateAnimation(this)">
+                <img class="product-URL" src="https://scdn.utkonos.ru/resample/webp/500x500/photo/659902/daf1c73a-836a-4a95-9bcd-fcedaebfcb43.png" alt="Product 3">
+                <div class="product-details">
+                    <div class="product-title">ДОБРЫЙ Кола сильногазированный, 1.5л</div>
+                    <div class="product-price">90 ₽</div>
+                    <button class="add-to-cart-button" onclick=AddToCartButton(this)>ДОБАВИТЬ</button>
+                    <button class="delete-to-cart-button" style="display:none;" onclick=deleteFromCartButton(this)>-</button>
+                    <div class="quantity" style="display:none;">0</div>
+                </div>
+            </div>
+
+            <div class="product" onclick="rotateAnimation(this)">
+                <img class="product-URL" src="https://scdn.utkonos.ru/resample/webp/500x500/photo/118230/1d1cecfa-a9f6-4f42-809c-1a477a230796.png" alt="Product 3">
+                    <div class="product-details">
+                    <div class="product-title">Вода питьевая СЕНЕЖСКАЯ газированная, 1.5л</div>
+                    <div class="product-price">40 ₽</div>
+                    <button class="add-to-cart-button" onclick=AddToCartButton(this)>ДОБАВИТЬ</button>
+                    <button class="delete-to-cart-button" style="display:none;" onclick=deleteFromCartButton(this)>-</button>
+                    <div class="quantity" style="display:none;">0</div>
+                </div>
+            </div>
+
+            <div class="product" onclick="rotateAnimation(this)">
+                <img class="product-URL" src="https://scdn.utkonos.ru/resample/webp/500x500/photo/501439/86d6bab0-e701-470b-8d74-740a5ce85b76.png" alt="Product 3">
+                <div class="product-details">
+                    <div class="product-title">ADRENALINE Rush Энергия газированный, 0.449л</div>
+                    <div class="product-price">130 ₽</div>
+                    <button class="add-to-cart-button" onclick=AddToCartButton(this)>ДОБАВИТЬ</button>
+                    <button class="delete-to-cart-button" style="display:none;" onclick=deleteFromCartButton(this)>-</button>
+                    <div class="quantity" style="display:none;">0</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="inner">
+            <div class="category-title" id="Tea_coffee_sugar" style="grid-column: 1 / span 3;">Чай, кофе, сахар</div>
+
+            <div class="product" onclick="rotateAnimation(this)">
+                <img class="product-URL" src="https://scdn.utkonos.ru/resample/webp/500x500/photo/581866/32aaa0b6-0e52-400a-a059-e2f25d4ddc34.png" alt="Product 3">
+                <div class="product-details">
+                    <div class="product-title">JACOBS Caramel/Monarch caramel 95г</div>
+                    <div class="product-price">260 ₽</div>
+                    <button class="add-to-cart-button" onclick=AddToCartButton(this)>ДОБАВИТЬ</button>
+                    <button class="delete-to-cart-button" style="display:none;" onclick=deleteFromCartButton(this)>-</button>
+                    <div class="quantity" style="display:none;">0</div>
+                </div>
+            </div>
+
+            <div class="product" onclick="rotateAnimation(this)">
+                <img class="product-URL" src="https://scdn.utkonos.ru/resample/webp/500x500/photo/142213/c0e0f0f0f0f0f830.png" alt="Product 3">
+                <div class="product-details">
+                    <div class="product-title">GREENFIELD Чай черный, 100пак</div>
+                    <div class="product-price">282 ₽</div>
+                    <button class="add-to-cart-button" onclick=AddToCartButton(this)>ДОБАВИТЬ</button>
+                    <button class="delete-to-cart-button" style="display:none;" onclick=deleteFromCartButton(this)>-</button>
+                    <div class="quantity" style="display:none;">0</div>
+                </div>
+            </div>
+
+            <div class="product" onclick="rotateAnimation(this)">
+                <img class="product-URL" src="https://scdn.utkonos.ru/resample/webp/500x500/photo/317726/94efabef-2bea-40c4-b8c0-f7d92013be28.png" alt="Product 3">
+                    <div class="product-details">
+                    <div class="product-title">CURTIS Sunny Lemon, Чай черный, 20пак</div>
+                    <div class="product-price">85 ₽</div>
+                    <button class="add-to-cart-button" onclick=AddToCartButton(this)>ДОБАВИТЬ</button>
+                    <button class="delete-to-cart-button" style="display:none;" onclick=deleteFromCartButton(this)>-</button>
+                    <div class="quantity" style="display:none;">0</div>
+                </div>
+            </div>
+
+            <div class="product" onclick="rotateAnimation(this)">
+                <img class="product-URL" src="https://scdn.utkonos.ru/resample/webp/500x500/photo/317726/94efabef-2bea-40c4-b8c0-f7d92013be28.png" alt="Product 3">
+                    <div class="product-details">
+                    <div class="product-title">CURTIS Sunny Lemon, Чай черный, 20пак</div>
+                    <div class="product-price">85 ₽</div>
+                    <button class="add-to-cart-button" onclick=AddToCartButton(this)>ДОБАВИТЬ</button>
+                    <button class="delete-to-cart-button" style="display:none;" onclick=deleteFromCartButton(this)>-</button>
+                    <div class="quantity" style="display:none;">0</div>
+                </div>
+            </div>
+
+            <div class="product" onclick="rotateAnimation(this)">
+                <img class="product-URL" src="https://scdn.utkonos.ru/resample/webp/500x500/photo/581866/32aaa0b6-0e52-400a-a059-e2f25d4ddc34.png" alt="Product 3">
+                <div class="product-details">
+                    <div class="product-title">JACOBS Caramel/Monarch caramel 95г</div>
+                    <div class="product-price">260 ₽</div>
+                    <button class="add-to-cart-button" onclick=AddToCartButton(this)>ДОБАВИТЬ</button>
+                    <button class="delete-to-cart-button" style="display:none;" onclick=deleteFromCartButton(this)>-</button>
+                    <div class="quantity" style="display:none;">0</div>
+                </div>
+            </div>
+
+            <div class="product" onclick="rotateAnimation(this)">
+                <img class="product-URL" src="https://scdn.utkonos.ru/resample/webp/500x500/photo/142213/c0e0f0f0f0f0f830.png" alt="Product 3">
+                <div class="product-details">
+                    <div class="product-title">GREENFIELD Чай черный, 100пак</div>
+                    <div class="product-price">282 ₽</div>
+                    <button class="add-to-cart-button" onclick=AddToCartButton(this)>ДОБАВИТЬ</button>
+                    <button class="delete-to-cart-button" style="display:none;" onclick=deleteFromCartButton(this)>-</button>
+                    <div class="quantity" style="display:none;">0</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="inner">
+            <div class="category-title" id="Vegetables_fruits_berries" style="grid-column: 1 / span 3;">Овощи, фрукты, ягоды</div>
+
+            <div class="product" onclick="rotateAnimation(this)">
+                <img class="product-URL" src="https://cdn.parhato.ru/wp-content/uploads/2022/11/ee4d27e9611911eda27800155d01c83b_916eda82615711ed98d100155d203202-3.jpg" alt="Product 3">
+                <div class="product-details">
+                    <div class="product-title">Картофель белый 1кг</div>
+                    <div class="product-price">70 ₽</div>
+                    <button class="add-to-cart-button" onclick=AddToCartButton(this)>ДОБАВИТЬ</button>
+                    <button class="delete-to-cart-button" style="display:none;" onclick=deleteFromCartButton(this)>-</button>
+                    <div class="quantity" style="display:none;">0</div>
+                </div>
+            </div>
+
+            <div class="product" onclick="rotateAnimation(this)">
+                <img class="product-URL" src="https://cdn.parhato.ru/wp-content/uploads/2022/11/5832b853611911eda27800155d01c83b_bb567fa8615711ed98d100155d203202-4.jpg" alt="Product 3">
+                <div class="product-details">
+                    <div class="product-title">Лук репчатый 1кг</div>
+                    <div class="product-price">42 ₽</div>
+                    <button class="add-to-cart-button" onclick=AddToCartButton(this)>ДОБАВИТЬ</button>
+                    <button class="delete-to-cart-button" style="display:none;" onclick=deleteFromCartButton(this)>-</button>
+                    <div class="quantity" style="display:none;">0</div>
+                </div>
+            </div>
+
+            <div class="product" onclick="rotateAnimation(this)">
+                <img class="product-URL" src="https://cdn.parhato.ru/wp-content/uploads/2022/11/5832b8f8611911eda27800155d01c83b_92014f34615711ed98d100155d203202-4.jpg" alt="Product 3">
+                <div class="product-details">
+                    <div class="product-title">Морковь 1кг</div>
+                    <div class="product-price">68 ₽</div>
+                    <button class="add-to-cart-button" onclick=AddToCartButton(this)>ДОБАВИТЬ</button>
+                    <button class="delete-to-cart-button" style="display:none;" onclick=deleteFromCartButton(this)>-</button>
+                    <div class="quantity" style="display:none;">0</div>
+                </div>
+            </div>
+
+            <div class="product" onclick="rotateAnimation(this)">
+                <img class="product-URL" src="https://cdn.parhato.ru/wp-content/uploads/2022/11/92e3f778611911eda27800155d01c83b_d61d844c615911ed98d100155d203202-2.jpg" alt="Product 3">
+                <div class="product-details">
+                    <div class="product-title">Огурцы эстафета 1кг</div>
+                    <div class="product-price">135 ₽</div>
+                    <button class="add-to-cart-button" onclick=AddToCartButton(this)>ДОБАВИТЬ</button>
+                    <button class="delete-to-cart-button" style="display:none;" onclick=deleteFromCartButton(this)>-</button>
+                    <div class="quantity" style="display:none;">0</div>
+                </div>
+            </div>
+
+            <div class="product" onclick="rotateAnimation(this)">
+                <img class="product-URL" src="https://cdn.parhato.ru/wp-content/uploads/2022/11/d410a627611911eda27800155d01c83b_acd8489e615711ed98d100155d203202.jpg" alt="Product 3">
+                <div class="product-details">
+                    <div class="product-title">Капуста пекинская 1кг</div>
+                    <div class="product-price">81 ₽</div>
+                    <button class="add-to-cart-button" onclick=AddToCartButton(this)>ДОБАВИТЬ</button>
+                    <button class="delete-to-cart-button" style="display:none;" onclick=deleteFromCartButton(this)>-</button>
+                    <div class="quantity" style="display:none;">0</div>
+                </div>
+            </div>
+
+            <div class="product" onclick="rotateAnimation(this)">
+                <img class="product-URL" src="https://cdn.parhato.ru/wp-content/uploads/2022/11/01862d6f611a11eda27800155d01c83b_ebcf65d2615711ed98d100155d203202-3.jpg" alt="Product 3">
+                <div class="product-details">
+                    <div class="product-title">Баклажаны 1кг</div>
+                    <div class="product-price">230 ₽</div>
+                    <button class="add-to-cart-button" onclick=AddToCartButton(this)>ДОБАВИТЬ</button>
+                    <button class="delete-to-cart-button" style="display:none;" onclick=deleteFromCartButton(this)>-</button>
+                    <div class="quantity" style="display:none;">0</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="inner">
+            <div class="category-title" id="Meat_poultry_fish" style="grid-column: 1 / span 3;">Мясо, птица, рыба</div>
+        </div>
+
+        <div class="inner">
+            <div class="category-title" id="Milk_eggs_cheese" style="grid-column: 1 / span 3;">Молоко, яйца, сыр</div>
+        </div>
+
+        <div class="inner">
+            <div class="category-title" id="Bread_crackers_bakery" style="grid-column: 1 / span 3;">Хлеб, хлебцы, выпечка</div>
+        </div>
+
+        <div class="inner">
+            <div class="category-title" id="Pasta_spices_grains" style="grid-column: 1 / span 3;">Макароны, специи, крупы</div>
+        </div>
+
+        <div class="inner">
+            <div class="category-title" id="Nuts_seeds_dried_fruits" style="grid-column: 1 / span 3;">Орехи, семечки, сухофрукты</div>
+        </div>
+
+        <div class="inner">
+            <div class="category-title" id="Canned_pickles" style="grid-column: 1 / span 3;">Консервы, соленья</div>
+        </div>
+
+        <div class="inner">
+            <div class="category-title" id="Sauces_mayonnaise" style="grid-column: 1 / span 3;">Соусы, майонез</div>
+        </div>
+
+        <div class="inner">
+            <div class="category-title" id="Frozen_products" style="grid-column: 1 / span 3;">Замороженные продукты</div>
+        </div>
+
+        <div class="inner">
+            <div class="category-title" id="Household_chemistry" style="grid-column: 1 / span 3;">Бытовая химия</div>
+        </div>
+
+        <div class="inner">
+            <div class="category-title" id="Pet_supplies" style="grid-column: 1 / span 3;">Зоотовары</div>
+        </div>
+
+        <div class="inner">
+            <div class="category-title" id="Personal_hygiene" style="grid-column: 1 / span 3;">Личная гигиена</div>
+        </div>
+
+        <div class="inner">
+            <div class="category-title" id="Other" style="grid-column: 1 / span 3;">Прочее</div>
+        </div>
+
+        <div id="scrollToCategoriesButton" onclick="scrollToTarget('categories')"></div>
+        <footer>
+            <p> 2024 GoyMarket. V1.0. Все права защищены.</p>
+        </footer>
+        <div class="empty-space"></div>
+    </div>
+
+    <button id="toggle-cart" class="open-cart-button" onclick=OpenCartButton(this)>Открыть корзину</button>
+
+    <div id="cart" class="cart hidden">
+        <div class="cart-header">
+            <span>ВАШ ЗАКАЗ</span>
+            <a class="edit-link" onclick=EditCart(this)>Изменить</a>
+        </div>
+        <div id="cart-container">
+        </div>
+        <div class="comment-section">
+            <div class="AllSumPrice">Общая сумма с учётом доставки: 0</div>
+            <label>
+                <textarea id="orderComment" placeholder="Написать комментарий..."></textarea>
+            </label>
+            <p>Здесь вы можете предоставить пожелания и детали для оформления заказа.</p>
+        </div>
+        <div class="number-section">
+            <label for="phoneNumber"></label><input class= "phone-number" type="tel" id="phoneNumber" pattern="[0-9]{12}" maxlength="12" placeholder="+7" value="+7">
+            <p>Напишите номер телефона получателя заказа.</p>
+        </div>
+
+        <div class="adres-section">
+            <label for="adresuser"></label><input class="adres" type="text" id="adresuser" placeholder="Введите адрес доставки...">
+            <p>Напишите ваш адрес для доставки вашего заказа.</p>
+        </div>
+    </div>
+</body>
+</html>
