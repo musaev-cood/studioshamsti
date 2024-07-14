@@ -2,20 +2,64 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
-    <title>GoyMarket</title>
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    <script src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&family=Yanone+Kaffeesatz:wght@300&display=swap" rel="stylesheet">
+    <title>Studio Shamsti</title>
 </head>
 <body>
-    <div class="container" id="categories">
+    <div class="container">
         <header>
-            <h1>STUDIO SHAMSTI - Видеосъемка мероприятий</h1>
+            <h1>Studio Shamsti</h1>
+            <div class="description">
+                <p>Профессиональная видеосъемка и монтаж.</p>
+            </div>
         </header>
+
+
+        <div class="booking-form">
+            <form action="#" method="post">
+                <label for="name">Имя и фамилия</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="date">Дата мероприятия</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="operators">Количество операторов (до 5)</label>
+                <select id="operators" name="operators">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+
+                <label for="editing">Монтаж</label>
+                <select id="editing" name="editing">
+                    <option value="easy">Легкий</option>
+                    <option value="classic">Классический</option>
+                </select>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="drone" name="drone">
+                    <label for="drone">Дрон</label>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="crane" name="crane">
+                    <label for="crane">Кран</label>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="photographer" name="photographer">
+                    <label for="photographer">Фотограф</label>
+                </div>
+
+                <button type="submit" class="button">Забронировать</button>
+            </form>
+        </div>
+        <footer>
+            &copy; 2024 Studio Shamsti. Все права защищены.
+        </footer>
     </div>
 </body>
 </html>
