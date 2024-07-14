@@ -11,7 +11,7 @@ form.addEventListener('submit', async (e) => {
     });
 
     try {
-        const response = await fetch('https://script.google.com/macros/s/AKfycbwgG_aeG-KrlzqEpzBTDnyDtneXaYWEYI3SgcWb9fjtk8L9CSaKJ9izukaIYAunV8ZjoQ/exec', {
+        const response = await fetch('https://script.google.com/macros/s/AKfycbyS_KlTwiBLYv82MB0IniDczrV67HW6Ezgd_q0Kw7rpcDO2t8UdT7gZXsridTYuu6w91A/exec', {
             method: 'POST',
             mode: 'cors',
             cache: 'no-cache',
